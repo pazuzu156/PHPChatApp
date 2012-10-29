@@ -38,7 +38,7 @@ if(isset($_GET['url'])) {
 			if(!file_exists($file)) {
 				$error = "<h1>Error 404: Not Found!</h1>";
 				$error .= "<p>The page you are looking for \"{$page}\" doesn't seem to exist or cannot be found!</p>";
-				die($error);
+				echo $error;
 			} else {
 				echo "<div id=\"header\"><h1>PHP/AJAX Chat App</h1></div>";
 				require $file;
@@ -46,6 +46,6 @@ if(isset($_GET['url'])) {
 			
 			?>
 		</div>
-		<script type="text/javascript" src="assets/chat.js"></script>
+		<?php if(isset($_SESSION['login'])){ ?><script type="text/javascript" src="assets/chat.js"></script><?php } ?>
 	</body>
 </html>
