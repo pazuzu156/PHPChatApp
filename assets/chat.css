@@ -1,0 +1,47 @@
+body {
+	font: 0.8em Arial;
+}
+
+html { margin: 15px; }
+
+#wrapper {
+	width: 270px;
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 0 25px #000;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.chat .messages {
+	border: 1px solid #ccc;
+	width: 250px;
+	height: 210px;
+	padding: 10px;
+	overflow-y: auto;
+}
+
+.chat .messages .message p { margin: 5px 0; }
+
+.chat .messages .message a { color: slategrey; }
+
+.chat .entry {
+	width: 260px;
+	padding: 5px;
+	height: 40px;
+	font: 1em Arial;
+	margin-top: 5px;
+	resize: none;
+	outline: none;
+}
+
+.chat .entry:focus {
+	border: 1px solid slategrey;
+	box-shadow: 0 0 25px slategrey;
+}
+
+/** MISC **/
+h1 { text-align: center; }
+span { font-weight: bold; }
+.error { color: red; }
+.success { color: green; }
